@@ -70,3 +70,44 @@ npm run dev
   - Bài 1: 1.1 → 1.6
   - Bài 2: 2.1 → 2.7
 - **Chưa hoàn thành**: Không
+
+## Lab 3
+### Mô tả ngắn gọn
+Thiết lập định tuyến cho các thao tác `review` trong ứng dụng minh hoạ Movie Reviews:
+Router → `ReviewsController` → `ReviewsDAO` → MongoDB (collection `reviews`).
+
+### Cách chạy chương trình
+1) Vào thư mục lab:
+
+```bash
+cd Lab03
+npm install
+```
+
+2) Chạy server:
+
+```bash
+npm run dev
+```
+
+3) Test API (endpoint cuối: `/review`):
+- `POST http://localhost:3000/api/v1/movies/review`
+- `PUT http://localhost:3000/api/v1/movies/review`
+- `DELETE http://localhost:3000/api/v1/movies/review`
+
+### Kết quả thực hiện
+- Đã triển khai route `/api/v1/movies/review` với đủ `POST/PUT/DELETE`.
+- Đã tạo:
+  - `backend/api/reviews.controller.js`: xử lý request body và trả JSON `success`.
+  - `backend/dao/reviewsDAO.js`: thao tác `insertOne`, `updateOne`, `deleteOne` trên collection `reviews`.
+  - `backend/index.js`: injectDB cho `ReviewsDAO` sau khi kết nối MongoDB.
+
+### Hình ảnh minh hoạ / output
+- **Kiểm tra Node.js version**: `Lab03/img/node-version.png`
+
+### Hoàn thành / chưa hoàn thành
+- **Đã hoàn thành**:
+  - Bài 1 (routing): 1.1 → 1.4 cho `/review`
+  - Bài 2 (controller + gọi DAO): 2.1 → 2.5
+  - Bài 3 (DAO + injectDB + ObjectId): 3.1 → 3.5
+- **Chưa hoàn thành**: không
