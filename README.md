@@ -9,7 +9,7 @@
 ## Danh sách các lab
 - **Lab 1**: Thực hành MongoDB (CRUD, query, update, aggregate) với collection `employees`.
 - **Lab 2**: Thiết lập môi trường Node.js + khởi tạo backend Movie Reviews (Express + MongoDB Atlas + DAO + Controller).
-
+- **Lab 3**: Thiết lập định tuyến + Controller + DAO cho review (POST/PUT/DELETE) trong backend Movie Reviews.
 ## Lab 1
 ### Mô tả ngắn gọn
 Thực hành các thao tác MongoDB trên collection `employees`: tạo dữ liệu, tạo index, truy vấn theo điều kiện, update theo điều kiện, và aggregate theo `organization`.
