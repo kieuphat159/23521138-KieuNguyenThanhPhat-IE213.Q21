@@ -10,6 +10,8 @@
 - **Lab 1**: Thực hành MongoDB (CRUD, query, update, aggregate) với collection `employees`.
 - **Lab 2**: Thiết lập môi trường Node.js + khởi tạo backend Movie Reviews (Express + MongoDB Atlas + DAO + Controller).
 - **Lab 3**: Thiết lập định tuyến + Controller + DAO cho review (POST/PUT/DELETE) trong backend Movie Reviews.
+- **Lab 4**: Thiết lập frontend React cho Movie Reviews (Navbar, components, routing, localStorage).
+- **Lab 5**: Kết nối frontend React tới backend bằng `axios`, xây dựng trang Movies / Movie / Review / Login và lọc theo title, rating.
 ## Lab 1
 ### Mô tả ngắn gọn
 Thực hành các thao tác MongoDB trên collection `employees`: tạo dữ liệu, tạo index, truy vấn theo điều kiện, update theo điều kiện, và aggregate theo `organization`.
@@ -111,3 +113,61 @@ npm run dev
   - Bài 2 (controller + gọi DAO): 2.1 → 2.5
   - Bài 3 (DAO + injectDB + ObjectId): 3.1 → 3.5
 - **Chưa hoàn thành**: không
+
+
+## Lab 4
+### Mô tả ngắn gọn
+Thiết lập frontend React cho ứng dụng Movie Reviews: scaffold app, tạo các component, thiết lập navbar và định tuyến, sử dụng `localStorage` để lưu movies và reviews mẫu.
+
+### Cách chạy chương trình
+1) Vào thư mục frontend:
+
+```bash
+cd Lab04/frontend
+npm install
+```
+
+2) Chạy app:
+
+```bash
+npm start
+```
+
+### Các nội dung đã triển khai
+- Bài 1: Tạo template frontend React trong `Lab04/frontend`, cài `bootstrap`, `react-router-dom`, `react-bootstrap`.
+- Bài 2: Triển khai các component trong `Lab04/frontend/src/components/`: `movies-list.js`, `movie.js`, `add-review.js`, `login.js`. `App.js` chứa Navbar React-Bootstrap, logo **Movie Reviews**, link **Movies**, và trạng thái **Login/Logout** quản lý bằng `useState`.
+- Bài 3: Thiết lập định tuyến bằng `Switch` / `Route` của `react-router-dom` v5 cho đường dẫn `/`, `/movies/:id`, `/movies/:id/review`, `/login`.
+
+### Hoàn thành / chưa hoàn thành
+- **Đã hoàn thành**: Bài 1 → Bài 3 (frontend cơ bản hoạt động, lưu dữ liệu mẫu vào `localStorage`).
+- **Chưa hoàn thành**: Không
+
+## Lab 5
+### Mô tả ngắn gọn
+Kết nối frontend React tới backend Movie Reviews bằng `axios`, tạo `MovieDataService`, hiển thị danh sách phim, xem chi tiết phim, thêm/sửa/xoá review và đăng nhập người dùng tạm thời.
+
+### Cách chạy chương trình
+1) Vào thư mục frontend:
+
+```bash
+cd Lab05/frontend
+npm install
+```
+
+2) Chạy app:
+
+```bash
+npm start
+```
+
+3) Nếu backend chạy ở URL khác, cấu hình `REACT_APP_API_BASE_URL` trước khi chạy app.
+
+### Các nội dung đã triển khai
+- Bài 1: Cài `axios`, tạo `MovieDataService` trong `Lab05/frontend/src/services/movies.js` với các hàm `getAll`, `get`, `find`, `createReview`, `updateReview`, `deleteReview`, `getRatings`.
+- Bài 2: Xây dựng `MoviesList` với `useState`, `useEffect`, form tìm theo title / rating và hiển thị movie bằng `Card`.
+- Bài 3: Xây dựng trang `Movie` để xem chi tiết, danh sách review, link thêm review và hiển thị thời gian bằng `moment`.
+- Bài 4: Bổ sung `AddReview` và `Login` để hoàn chỉnh luồng thêm/sửa/xoá review.
+
+### Hoàn thành / chưa hoàn thành
+- **Đã hoàn thành**: Bài 1 → Bài 4.
+- **Chưa hoàn thành**: Không
